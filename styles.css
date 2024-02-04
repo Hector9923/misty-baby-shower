@@ -19,6 +19,18 @@
     padding-top: 50px;
 }
 
+.registries-btn {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.arrow-icon {
+    width: 5%;
+}
+
 .image {
     width: 50%;
 }
