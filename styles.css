@@ -1,36 +1,167 @@
-* {
-    margin: 20px;
+body {
+    margin: 5%;
+    background-color: #f4f1ea;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(/Virtual-Font/Virtual-Regular.ttf);
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(/Yeseva_One/YesevaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: myThirdFont;
+    src: url(/Hanken_Grotesk/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+.YesevaOne {
+    font-family: mySecondFont;
+    font-weight: 1;
+}
+
+.grotesk {
+    font-family: myThirdFont;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
+    height: 40%;
 }
 
-.image-wrapper {
+.page-title {
+    font-family: myFirstFont;
+    font-size: 8rem;
+    font-weight: 1;
+    margin: 0;
+}
+
+.baby-shower {
+    font-family: mySecondFont;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.first-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    height: 100%;
+}
+
+.second-image-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    height: 100%;
+}
+
+.mobile-images {
+    display: none;
 }
 
 .text-wrapper {
     text-align: center;
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.registries-btn {
-    width: 50%;
+.registries {
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 120%;
+    padding: 1% 8% 1% 13%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.link {
+    color: #2C73D2;
 }
 
 .arrow-icon {
-    width: 5%;
+    width: 15%;
+    background-color: black;
 }
 
-.image {
-    width: 50%;
+.vertical-image {
+    width: 30%;
+}
+
+.horizontal-image {
+    width: 45%;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 470px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-wrapper {
+        padding-top: 0;
+    }
+
+    .horizontal-image {
+        width: 49%;
+    }
+    .first {
+        width: 100%;
+    }
+
+    .second, .third, .fourth, .fifth, .sixth {
+        display: none;
+    }
+
+    .mobile-images {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .registries {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 45%;
+    }
+
+    .link {
+        font-size: 1.3rem;
+        color: #2C73D2;
+        font-weight: bold;
+    }
+
+    .location-time-title {
+        border-top: 1px dashed black;
+        padding-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .location-time {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    .page-title {
+        font-size: 6rem;
+        font-weight: 1;
+        margin: 0;
+    }
+
+    .baby-shower {
+        margin: 0;
+        padding-bottom: 20px;
+        font-weight: 1;
+    }
 }
